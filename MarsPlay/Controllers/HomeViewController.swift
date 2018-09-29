@@ -16,11 +16,33 @@ class HomeViewController: UIViewController {
     var items : [Item] = []
     var apiHandler : APIHandler!
     var isNewDataLoading = false
+    var isLandScape = UIDevice.current.orientation.isLandscape
+    var screenPadding : CGFloat = 2
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        calculateScreenPadding()
         fetchItemsList()
+    }
+    
+    private func calculateScreenPadding() {
+        if UIDevice().userInterfaceIdiom == .phone {
+            switch UIScreen.main.nativeBounds.height {
+            case 2436, 2688, 1792:
+                screenPadding = 46
+            default:
+                screenPadding = 2
+            }
+        }
+    }
+    
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        isLandScape = UIDevice.current.orientation.isLandscape
+        
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
     }
     
     fileprivate func fetchItemsList() {
@@ -86,7 +108,8 @@ extension HomeViewController : UICollectionViewDataSource, UICollectionViewDeleg
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = UIScreen.main.bounds.width / 2 - 2
+        let offset : CGFloat = (isLandScape) ? screenPadding : 2
+        let width = UIScreen.main.bounds.width / 2 - offset
         let heigt = width / 0.75
         return CGSize(width: width, height: heigt)
     }

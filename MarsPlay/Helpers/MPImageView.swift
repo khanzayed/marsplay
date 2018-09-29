@@ -15,7 +15,7 @@ class MPImageView: UIImageView {
     var urlString : String?
     
     internal func loadImageUsingString(_ imageUrl : String?) {
-        guard let url = imageUrl, url.count > 0 else {
+        guard let url = imageUrl, url.count > 0, url != "N/A" else {
             self.image = defaultImage()
             return
         }
@@ -49,7 +49,7 @@ class MPImageView: UIImageView {
 extension UIImageView {
     
     internal func defaultImage() -> UIImage {
-        return UIImage(named: "")!
+        return UIImage(named: "defaultImage")!
     }
     
 }

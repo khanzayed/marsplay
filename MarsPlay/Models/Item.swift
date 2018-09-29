@@ -23,11 +23,7 @@ class Item {
         imdbID = details["imdbID"] as? String
         
         if let value = details["Type"] as? String {
-            if value == "movie" {
-                type = "Movie"
-            } else if value == "series" {
-                type = "Series"
-            }
+            type = value.prefix(1).uppercased() + value.dropFirst()
         }
         
         if let value = details["Year"] as? String {
