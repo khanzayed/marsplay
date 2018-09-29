@@ -173,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				FE5BE80F215F6DCC0024F52B /* Cases */,
-				FE5BE810215F6DD40024F52B /* Data */,
 				FE5BE809215F6D7A0024F52B /* Info.plist */,
 			);
 			path = MarsPlayTests;
@@ -185,13 +184,6 @@
 				FE5BE812215F6E460024F52B /* ItemTests.swift */,
 			);
 			path = Cases;
-			sourceTree = "<group>";
-		};
-		FE5BE810215F6DD40024F52B /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
