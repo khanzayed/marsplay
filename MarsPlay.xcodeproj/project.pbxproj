@@ -17,7 +17,19 @@
 		FE5BE7F9215ECB5D0024F52B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5BE7F8215ECB5D0024F52B /* Item.swift */; };
 		FE5BE7FC215F19C40024F52B /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5BE7FB215F19C40024F52B /* ItemCell.swift */; };
 		FE5BE7FE215F1DDF0024F52B /* MPImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5BE7FD215F1DDF0024F52B /* MPImageView.swift */; };
+		FE5BE800215F685A0024F52B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5BE7FF215F685A0024F52B /* DetailViewController.swift */; };
+		FE5BE813215F6E460024F52B /* ItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5BE812215F6E460024F52B /* ItemTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE5BE80A215F6D7A0024F52B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE5BE7CD215EC1340024F52B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE5BE7D4215EC1340024F52B;
+			remoteInfo = MarsPlay;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		FE5BE7D5215EC1340024F52B /* MarsPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarsPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,10 +44,21 @@
 		FE5BE7F8215ECB5D0024F52B /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		FE5BE7FB215F19C40024F52B /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		FE5BE7FD215F1DDF0024F52B /* MPImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPImageView.swift; sourceTree = "<group>"; };
+		FE5BE7FF215F685A0024F52B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FE5BE805215F6D7A0024F52B /* MarsPlayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarsPlayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE5BE809215F6D7A0024F52B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE5BE812215F6E460024F52B /* ItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FE5BE7D2215EC1340024F52B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE5BE802215F6D7A0024F52B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				FE5BE7D7215EC1340024F52B /* MarsPlay */,
+				FE5BE806215F6D7A0024F52B /* MarsPlayTests */,
 				FE5BE7D6215EC1340024F52B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				FE5BE7D5215EC1340024F52B /* MarsPlay.app */,
+				FE5BE805215F6D7A0024F52B /* MarsPlayTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,8 +89,8 @@
 		FE5BE7D7215EC1340024F52B /* MarsPlay */ = {
 			isa = PBXGroup;
 			children = (
-				FE5BE7F3215EC1D10024F52B /* Application */,
 				FE5BE7ED215EC1420024F52B /* Api Handler */,
+				FE5BE7F3215EC1D10024F52B /* Application */,
 				FE5BE7F0215EC1740024F52B /* Controllers */,
 				FE5BE7F1215EC17A0024F52B /* Helpers */,
 				FE5BE7F2215EC1930024F52B /* Models */,
@@ -106,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				FE5BE7DA215EC1340024F52B /* HomeViewController.swift */,
+				FE5BE7FF215F685A0024F52B /* DetailViewController.swift */,
 				FE5BE7FA215F19A40024F52B /* Cells */,
 			);
 			path = Controllers;
@@ -143,6 +169,31 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		FE5BE806215F6D7A0024F52B /* MarsPlayTests */ = {
+			isa = PBXGroup;
+			children = (
+				FE5BE80F215F6DCC0024F52B /* Cases */,
+				FE5BE810215F6DD40024F52B /* Data */,
+				FE5BE809215F6D7A0024F52B /* Info.plist */,
+			);
+			path = MarsPlayTests;
+			sourceTree = "<group>";
+		};
+		FE5BE80F215F6DCC0024F52B /* Cases */ = {
+			isa = PBXGroup;
+			children = (
+				FE5BE812215F6E460024F52B /* ItemTests.swift */,
+			);
+			path = Cases;
+			sourceTree = "<group>";
+		};
+		FE5BE810215F6DD40024F52B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -163,6 +214,24 @@
 			productReference = FE5BE7D5215EC1340024F52B /* MarsPlay.app */;
 			productType = "com.apple.product-type.application";
 		};
+		FE5BE804215F6D7A0024F52B /* MarsPlayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE5BE80C215F6D7A0024F52B /* Build configuration list for PBXNativeTarget "MarsPlayTests" */;
+			buildPhases = (
+				FE5BE801215F6D7A0024F52B /* Sources */,
+				FE5BE802215F6D7A0024F52B /* Frameworks */,
+				FE5BE803215F6D7A0024F52B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE5BE80B215F6D7A0024F52B /* PBXTargetDependency */,
+			);
+			name = MarsPlayTests;
+			productName = MarsPlayTests;
+			productReference = FE5BE805215F6D7A0024F52B /* MarsPlayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -175,6 +244,11 @@
 				TargetAttributes = {
 					FE5BE7D4215EC1340024F52B = {
 						CreatedOnToolsVersion = 10.0;
+					};
+					FE5BE804215F6D7A0024F52B = {
+						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
+						TestTargetID = FE5BE7D4215EC1340024F52B;
 					};
 				};
 			};
@@ -192,6 +266,7 @@
 			projectRoot = "";
 			targets = (
 				FE5BE7D4215EC1340024F52B /* MarsPlay */,
+				FE5BE804215F6D7A0024F52B /* MarsPlayTests */,
 			);
 		};
 /* End PBXProject section */
@@ -204,6 +279,13 @@
 				FE5BE7E6215EC1350024F52B /* LaunchScreen.storyboard in Resources */,
 				FE5BE7E3215EC1350024F52B /* Assets.xcassets in Resources */,
 				FE5BE7DE215EC1340024F52B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE5BE803215F6D7A0024F52B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,10 +303,27 @@
 				FE5BE7FE215F1DDF0024F52B /* MPImageView.swift in Sources */,
 				FE5BE7F9215ECB5D0024F52B /* Item.swift in Sources */,
 				FE5BE7F5215EC2720024F52B /* APIHandler.swift in Sources */,
+				FE5BE800215F685A0024F52B /* DetailViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE5BE801215F6D7A0024F52B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE5BE813215F6E460024F52B /* ItemTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE5BE80B215F6D7A0024F52B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE5BE7D4215EC1340024F52B /* MarsPlay */;
+			targetProxy = FE5BE80A215F6D7A0024F52B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FE5BE7DC215EC1340024F52B /* Main.storyboard */ = {
@@ -400,6 +499,49 @@
 			};
 			name = Release;
 		};
+		FE5BE80D215F6D7A0024F52B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6SLEBG5JCF;
+				INFOPLIST_FILE = MarsPlayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.practice.MarsPlayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarsPlay.app/MarsPlay";
+			};
+			name = Debug;
+		};
+		FE5BE80E215F6D7A0024F52B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6SLEBG5JCF;
+				INFOPLIST_FILE = MarsPlayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.practice.MarsPlayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarsPlay.app/MarsPlay";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -417,6 +559,15 @@
 			buildConfigurations = (
 				FE5BE7EB215EC1350024F52B /* Debug */,
 				FE5BE7EC215EC1350024F52B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE5BE80C215F6D7A0024F52B /* Build configuration list for PBXNativeTarget "MarsPlayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE5BE80D215F6D7A0024F52B /* Debug */,
+				FE5BE80E215F6D7A0024F52B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

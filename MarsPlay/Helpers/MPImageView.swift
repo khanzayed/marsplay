@@ -14,15 +14,15 @@ class MPImageView: UIImageView {
 
     var urlString : String?
     
-    internal func loadImageUsingString(_ imageUrl : String?) {
-        guard let url = imageUrl, url.count > 0, url != "N/A" else {
+    internal func loadImageUsingString(_ imageUrl : URL?) {
+        guard let url = imageUrl else {
             self.image = defaultImage()
             return
         }
         
-        urlString = imageUrl
+        urlString = imageUrl?.absoluteString
         self.image = nil
-        if let imageFromCache = newImageCache.object(forKey: url as NSString) {
+        if let imageFromCache = newImageCache.object(forKey: url.absoluteString as NSString) {
             self.image = imageFromCache
             return
         }
@@ -33,11 +33,11 @@ class MPImageView: UIImageView {
             }
             
             if let img = image {
-                newImageCache.setObject(img, forKey: url as NSString)
+                newImageCache.setObject(img, forKey: url.absoluteString as NSString)
             }
             
             DispatchQueue.main.async {
-                if self?.urlString == imageUrl {
+                if self?.urlString == imageUrl?.absoluteString {
                     self?.image = (image != nil) ? image : UIImage(named: "defaultImage")
                 }
             }

@@ -11,16 +11,19 @@ import UIKit
 
 class Item {
     
-    var imageUrlString : String?
+    var imageUrl : URL?
     var title : String?
     var type : String?
     var imdbID : String?
     var year : String?
     
     init(details : [String : Any], currentYear : Int) {
-        imageUrlString = details["Poster"] as? String
         title = details["Title"] as? String
         imdbID = details["imdbID"] as? String
+        
+        if let value = details["Poster"] as? String, value.count > 0, value != "N/A", let url = URL(string: value) {
+            imageUrl = url
+        }
         
         if let value = details["Type"] as? String {
             type = value.prefix(1).uppercased() + value.dropFirst()

@@ -57,12 +57,8 @@ class APIHandler {
         task.resume()
     }
     
-    internal func getUserImageFromUrlStr(_ urlString:String, completion:  @escaping (UIImage?) -> Void) {
-        guard let requestURL = URL(string: urlString) else {
-            return
-        }
-        
-        var request = URLRequest(url: requestURL)
+    internal func getUserImageFromUrlStr(_ url : URL, completion : @escaping (UIImage?) -> Void) {
+        var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         

@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     
     var page : Int = 0
     var items : [Item] = []
+    var totalCount = 0
     var apiHandler : APIHandler!
     var isNewDataLoading = false
     var isLandScape = UIDevice.current.orientation.isLandscape
@@ -23,7 +24,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         calculateScreenPadding()
-        fetchItemsList()
+        fetchItemsList(page: page + 1)
     }
     
     private func calculateScreenPadding() {
@@ -45,9 +46,7 @@ class HomeViewController: UIViewController {
         }
     }
     
-    fileprivate func fetchItemsList() {
-        page += 1
-        
+    fileprivate func fetchItemsList(page : Int) {
         isNewDataLoading = true
         
         let params : [String : String] = [
@@ -55,7 +54,7 @@ class HomeViewController: UIViewController {
             "page"      :     "\(page)",
             "apikey"    :     "eeefc96f"
         ]
-        
+
         apiHandler = APIHandler()
         apiHandler.getItems(params) { [weak self] (responseList, message) in
             guard let strongSelf = self else {
@@ -63,6 +62,8 @@ class HomeViewController: UIViewController {
             }
             
             if let list = responseList {
+                strongSelf.page += 1
+                
                 let initial = strongSelf.items.count
                 
                 strongSelf.items += list
@@ -86,12 +87,9 @@ class HomeViewController: UIViewController {
                     }
             } else if let errorMessage = message {
                 print(errorMessage)
+                strongSelf.isNewDataLoading = false
             }
         }
-    }
-    
-    fileprivate func showFooter() {
-        
     }
 
 }
@@ -119,14 +117,13 @@ extension HomeViewController : UICollectionViewDataSource, UICollectionViewDeleg
         
         let item = items[indexPath.row]
         cell.titleLbl.text = item.title ?? ""
-        cell.itemImageView.loadImageUsingString(item.imageUrlString)
+        cell.itemImageView.loadImageUsingString(item.imageUrl)
         cell.typeLbl.text = item.type ?? ""
         cell.yearsLbl.text = item.year ?? ""
         
         if indexPath.row == items.count - 1, !isNewDataLoading { // more items to fetch
             isNewDataLoading = true
-            showFooter()
-            fetchItemsList()
+            fetchItemsList(page: self.page + 1)
         }
         
         return cell
@@ -135,6 +132,13 @@ extension HomeViewController : UICollectionViewDataSource, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailVC = mainStoryboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        detailVC.item = items[indexPath.row]
+        
+        DispatchQueue.main.async {
+            self.navigationController?.pushViewController(detailVC, animated: true)
+        }
     }
     
 }
