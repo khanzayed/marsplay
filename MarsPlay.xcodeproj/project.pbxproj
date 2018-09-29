@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FE5BE7D9215EC1340024F52B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5BE7D8215EC1340024F52B /* AppDelegate.swift */; };
+		FE5BE7DB215EC1340024F52B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5BE7DA215EC1340024F52B /* HomeViewController.swift */; };
+		FE5BE7DE215EC1340024F52B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE5BE7DC215EC1340024F52B /* Main.storyboard */; };
+		FE5BE7E1215EC1340024F52B /* MarsPlay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE5BE7DF215EC1340024F52B /* MarsPlay.xcdatamodeld */; };
+		FE5BE7E3215EC1350024F52B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE5BE7E2215EC1350024F52B /* Assets.xcassets */; };
+		FE5BE7E6215EC1350024F52B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE5BE7E4215EC1350024F52B /* LaunchScreen.storyboard */; };
+		FE5BE7F5215EC2720024F52B /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5BE7F4215EC2720024F52B /* APIHandler.swift */; };
+		FE5BE7F9215ECB5D0024F52B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5BE7F8215ECB5D0024F52B /* Item.swift */; };
+		FE5BE7FC215F19C40024F52B /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5BE7FB215F19C40024F52B /* ItemCell.swift */; };
+		FE5BE7FE215F1DDF0024F52B /* MPImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5BE7FD215F1DDF0024F52B /* MPImageView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FE5BE7D5215EC1340024F52B /* MarsPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarsPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE5BE7D8215EC1340024F52B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FE5BE7DA215EC1340024F52B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FE5BE7DD215EC1340024F52B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FE5BE7E0215EC1340024F52B /* MarsPlay.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MarsPlay.xcdatamodel; sourceTree = "<group>"; };
+		FE5BE7E2215EC1350024F52B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE5BE7E5215EC1350024F52B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FE5BE7E7215EC1350024F52B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE5BE7F4215EC2720024F52B /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
+		FE5BE7F8215ECB5D0024F52B /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		FE5BE7FB215F19C40024F52B /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		FE5BE7FD215F1DDF0024F52B /* MPImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPImageView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE5BE7D2215EC1340024F52B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FE5BE7CC215EC1340024F52B = {
+			isa = PBXGroup;
+			children = (
+				FE5BE7D7215EC1340024F52B /* MarsPlay */,
+				FE5BE7D6215EC1340024F52B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FE5BE7D6215EC1340024F52B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE5BE7D5215EC1340024F52B /* MarsPlay.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE5BE7D7215EC1340024F52B /* MarsPlay */ = {
+			isa = PBXGroup;
+			children = (
+				FE5BE7F3215EC1D10024F52B /* Application */,
+				FE5BE7ED215EC1420024F52B /* Api Handler */,
+				FE5BE7F0215EC1740024F52B /* Controllers */,
+				FE5BE7F1215EC17A0024F52B /* Helpers */,
+				FE5BE7F2215EC1930024F52B /* Models */,
+				FE5BE7EF215EC1650024F52B /* Storyboards */,
+				FE5BE7EE215EC15D0024F52B /* Support Files */,
+				FE5BE7E7215EC1350024F52B /* Info.plist */,
+			);
+			path = MarsPlay;
+			sourceTree = "<group>";
+		};
+		FE5BE7ED215EC1420024F52B /* Api Handler */ = {
+			isa = PBXGroup;
+			children = (
+				FE5BE7F4215EC2720024F52B /* APIHandler.swift */,
+			);
+			path = "Api Handler";
+			sourceTree = "<group>";
+		};
+		FE5BE7EE215EC15D0024F52B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE5BE7E2215EC1350024F52B /* Assets.xcassets */,
+				FE5BE7DF215EC1340024F52B /* MarsPlay.xcdatamodeld */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		FE5BE7EF215EC1650024F52B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FE5BE7E4215EC1350024F52B /* LaunchScreen.storyboard */,
+				FE5BE7DC215EC1340024F52B /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FE5BE7F0215EC1740024F52B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FE5BE7DA215EC1340024F52B /* HomeViewController.swift */,
+				FE5BE7FA215F19A40024F52B /* Cells */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FE5BE7F1215EC17A0024F52B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FE5BE7FD215F1DDF0024F52B /* MPImageView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FE5BE7F2215EC1930024F52B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FE5BE7F8215ECB5D0024F52B /* Item.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FE5BE7F3215EC1D10024F52B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				FE5BE7D8215EC1340024F52B /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		FE5BE7FA215F19A40024F52B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FE5BE7FB215F19C40024F52B /* ItemCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE5BE7D4215EC1340024F52B /* MarsPlay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE5BE7EA215EC1350024F52B /* Build configuration list for PBXNativeTarget "MarsPlay" */;
+			buildPhases = (
+				FE5BE7D1215EC1340024F52B /* Sources */,
+				FE5BE7D2215EC1340024F52B /* Frameworks */,
+				FE5BE7D3215EC1340024F52B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MarsPlay;
+			productName = MarsPlay;
+			productReference = FE5BE7D5215EC1340024F52B /* MarsPlay.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE5BE7CD215EC1340024F52B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = MarsPlay;
+				TargetAttributes = {
+					FE5BE7D4215EC1340024F52B = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = FE5BE7D0215EC1340024F52B /* Build configuration list for PBXProject "MarsPlay" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FE5BE7CC215EC1340024F52B;
+			productRefGroup = FE5BE7D6215EC1340024F52B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE5BE7D4215EC1340024F52B /* MarsPlay */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE5BE7D3215EC1340024F52B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE5BE7E6215EC1350024F52B /* LaunchScreen.storyboard in Resources */,
+				FE5BE7E3215EC1350024F52B /* Assets.xcassets in Resources */,
+				FE5BE7DE215EC1340024F52B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE5BE7D1215EC1340024F52B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE5BE7E1215EC1340024F52B /* MarsPlay.xcdatamodeld in Sources */,
+				FE5BE7DB215EC1340024F52B /* HomeViewController.swift in Sources */,
+				FE5BE7FC215F19C40024F52B /* ItemCell.swift in Sources */,
+				FE5BE7D9215EC1340024F52B /* AppDelegate.swift in Sources */,
+				FE5BE7FE215F1DDF0024F52B /* MPImageView.swift in Sources */,
+				FE5BE7F9215ECB5D0024F52B /* Item.swift in Sources */,
+				FE5BE7F5215EC2720024F52B /* APIHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FE5BE7DC215EC1340024F52B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE5BE7DD215EC1340024F52B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FE5BE7E4215EC1350024F52B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE5BE7E5215EC1350024F52B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FE5BE7E8215EC1350024F52B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FE5BE7E9215EC1350024F52B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FE5BE7EB215EC1350024F52B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6SLEBG5JCF;
+				INFOPLIST_FILE = MarsPlay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.practice.MarsPlay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FE5BE7EC215EC1350024F52B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6SLEBG5JCF;
+				INFOPLIST_FILE = MarsPlay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.practice.MarsPlay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE5BE7D0215EC1340024F52B /* Build configuration list for PBXProject "MarsPlay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE5BE7E8215EC1350024F52B /* Debug */,
+				FE5BE7E9215EC1350024F52B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE5BE7EA215EC1350024F52B /* Build configuration list for PBXNativeTarget "MarsPlay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE5BE7EB215EC1350024F52B /* Debug */,
+				FE5BE7EC215EC1350024F52B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FE5BE7DF215EC1340024F52B /* MarsPlay.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FE5BE7E0215EC1340024F52B /* MarsPlay.xcdatamodel */,
+			);
+			currentVersion = FE5BE7E0215EC1340024F52B /* MarsPlay.xcdatamodel */;
+			path = MarsPlay.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FE5BE7CD215EC1340024F52B /* Project object */;
+}
