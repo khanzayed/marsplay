@@ -12,6 +12,7 @@ class ItemCell: UICollectionViewCell {
     
     @IBOutlet weak var itemImageView: MPImageView!
     @IBOutlet weak var titleLbl: UILabel!
-    
+    @IBOutlet weak var typeLbl: UILabel!
+    @IBOutlet weak var yearsLbl: UILabel!
     
 }

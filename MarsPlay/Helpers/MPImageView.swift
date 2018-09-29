@@ -21,6 +21,7 @@ class MPImageView: UIImageView {
         }
         
         urlString = imageUrl
+        self.image = nil
         if let imageFromCache = newImageCache.object(forKey: url as NSString) {
             self.image = imageFromCache
             return
@@ -37,7 +38,7 @@ class MPImageView: UIImageView {
             
             DispatchQueue.main.async {
                 if self?.urlString == imageUrl {
-                    self?.image = image
+                    self?.image = (image != nil) ? image : UIImage(named: "defaultImage")
                 }
             }
         })

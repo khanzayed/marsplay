@@ -11,6 +11,8 @@ import UIKit
 
 class APIHandler {
     
+    let currentYear = Calendar.current.component(.year, from: Date())
+    
     private var baseURL : String {
         get{
             return "http://www.omdbapi.com/"
@@ -32,12 +34,16 @@ class APIHandler {
         request.httpMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        let task = URLSession.shared.dataTask(with: request, completionHandler: { data, response, error -> Void in
+        let task = URLSession.shared.dataTask(with: request, completionHandler: { [weak self] (data, response, error) -> Void in
+            guard let strongSelf = self else {
+                return
+            }
+            
             if let value = data, let json = try? JSONSerialization.jsonObject(with: value) as? [String : Any] {
                 if let searchResults = json?["Search"] as? [[String:Any]] {
                     var list = [Item]()
                     for result in searchResults {
-                        list.append(Item(details: result))
+                        list.append(Item(details: result, currentYear : strongSelf.currentYear))
                     }
                     completion(list, nil)
                 }

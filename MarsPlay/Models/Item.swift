@@ -17,12 +17,28 @@ class Item {
     var imdbID : String?
     var year : String?
     
-    init(details : [String : Any]) {
+    init(details : [String : Any], currentYear : Int) {
         imageUrlString = details["Poster"] as? String
         title = details["Title"] as? String
-        type = details["Type"] as? String
-        imdbID = details["Year"] as? String
-        year = details["imdbID"] as? String
+        imdbID = details["imdbID"] as? String
+        
+        if let value = details["Type"] as? String {
+            if value == "movie" {
+                type = "Movie"
+            } else if value == "series" {
+                type = "Series"
+            }
+        }
+        
+        if let value = details["Year"] as? String {
+            let launchYear = (value.count > 4) ? Int(value.prefix(4))! : Int(value)!
+            let diff = currentYear - launchYear
+            if diff > 0 {
+                year = "\(diff) years ago"
+            } else if diff == 0 {
+                year = "This year"
+            }
+        }
     }
     
 }

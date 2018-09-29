@@ -20,7 +20,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LIm-ax-7tb">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="deviceRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="cOd-BW-5xr">
                                     <size key="itemSize" width="187" height="250"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -36,30 +36,54 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZnN-yw-eVv" customClass="MPImageView" customModule="MarsPlay" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="187" height="200"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="187" height="187"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Faraz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRw-sS-S55">
-                                                    <rect key="frame" x="10" y="205" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Batman v Superman: Dawn of Justice" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRw-sS-S55">
+                                                    <rect key="frame" x="10" y="193" width="168" height="31.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Series" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TwM-Tl-TOM">
+                                                    <rect key="frame" x="10" y="225" width="36" height="19"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="A0Z-jP-XWU"/>
+                                                        <constraint firstAttribute="width" constant="36" id="Amk-te-REC"/>
+                                                        <constraint firstAttribute="height" constant="19" id="o9P-ER-cUp"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 years ago" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mo6-6i-rOU">
+                                                    <rect key="frame" x="109" y="225" width="67" height="19"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="19" id="dRy-QG-Pr6"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Mo6-6i-rOU" secondAttribute="trailing" constant="11" id="Bad-gZ-3CQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="Mo6-6i-rOU" secondAttribute="bottom" constant="6" id="KAq-mt-86s"/>
                                             <constraint firstItem="TRw-sS-S55" firstAttribute="leading" secondItem="nla-s6-b7E" secondAttribute="leading" constant="10" id="a2X-8y-YRS"/>
-                                            <constraint firstItem="TRw-sS-S55" firstAttribute="top" secondItem="ZnN-yw-eVv" secondAttribute="bottom" constant="5" id="dYx-dB-q8H"/>
+                                            <constraint firstAttribute="bottom" secondItem="TwM-Tl-TOM" secondAttribute="bottom" constant="6" id="aul-hM-Sx8"/>
+                                            <constraint firstItem="TRw-sS-S55" firstAttribute="top" secondItem="ZnN-yw-eVv" secondAttribute="bottom" constant="6" id="dYx-dB-q8H"/>
+                                            <constraint firstItem="TwM-Tl-TOM" firstAttribute="leading" secondItem="nla-s6-b7E" secondAttribute="leading" constant="10" id="diq-7g-0aT"/>
                                             <constraint firstItem="ZnN-yw-eVv" firstAttribute="top" secondItem="nla-s6-b7E" secondAttribute="top" id="f5e-cV-dtm"/>
-                                            <constraint firstAttribute="bottom" secondItem="ZnN-yw-eVv" secondAttribute="bottom" constant="50" id="n1f-OC-CuO"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZnN-yw-eVv" secondAttribute="bottom" constant="63" id="n1f-OC-CuO"/>
                                             <constraint firstAttribute="trailing" secondItem="ZnN-yw-eVv" secondAttribute="trailing" id="ri2-s9-NH6"/>
                                             <constraint firstItem="ZnN-yw-eVv" firstAttribute="leading" secondItem="nla-s6-b7E" secondAttribute="leading" id="ryb-SN-XLh"/>
+                                            <constraint firstAttribute="trailing" secondItem="TRw-sS-S55" secondAttribute="trailing" constant="9" id="uYb-nk-xzk"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="itemImageView" destination="ZnN-yw-eVv" id="6dv-on-UXi"/>
                                             <outlet property="titleLbl" destination="TRw-sS-S55" id="jub-hm-gMm"/>
+                                            <outlet property="typeLbl" destination="TwM-Tl-TOM" id="y8l-st-h0a"/>
+                                            <outlet property="yearsLbl" destination="Mo6-6i-rOU" id="G8W-nL-bzq"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
